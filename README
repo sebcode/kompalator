@@ -1,0 +1,15 @@
+kompalator by Sebastian Volland
+
+Script to merge html+css+js+img into a standalone HTML file.
+
+Processes:
+
+ * <script src="..."/> => <script>...</script>
+ * <link href="..."/> => <style>...</style>
+ * <img src="..."/> => <img src="datauri:..."/>
+
+Uses yuicompressor to minify js and css. Place yuicompressor*.jar into
+the same directory as kompalator.php.
+
+Usage: ./kompalator.php yourfile.html > output.html
+
