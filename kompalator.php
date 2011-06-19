@@ -24,7 +24,7 @@ class Kompalator
 			throw new Exception('Could not read: ' . $this->file);
 		}
 
-		$c = preg_replace_callback('@<script.*?src=["\'](.*?)["\'].*?/script>@is', array($this, 'replaceScript'), $c);
+		$c = preg_replace_callback('@<script[^>].*?src=["\'](.*?)["\'].*?/script>@is', array($this, 'replaceScript'), $c);
 
 		$c = preg_replace_callback('@<link.*?href=["\'](.*?)["\'].*?>@is', array($this, 'replaceCss'), $c);
 		
